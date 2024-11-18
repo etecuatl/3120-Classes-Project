@@ -7,8 +7,10 @@ class Animal:
         self.kingdom = 'animalia'
         self.species = species
 
-# Testing to see if the code works
-elephant = Animal("Elephant", "Loxodonta africana")
-print(elephant.animal)
-print(elephant.kingdom)
-print(elephant.species)
+    def describe(self):
+        '''This will print a descriptive sentence about the animal.'''
+        return f"{self.animal} is a species of {self.species} in the kingdom {self.kingdom}."
+
+# Testing the describe method
+elephant = Animal("The "+"Elephant", "Loxodonta africana")
+print(elephant.describe())
