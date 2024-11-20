@@ -14,3 +14,5 @@ class Animal:
 # Testing the describe method
 elephant = Animal("The "+"Elephant", "Loxodonta africana")
 print(elephant.describe())
+
+#added...
