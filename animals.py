@@ -1,16 +1,23 @@
+# Base class for all animals
 class Animal:
-    '''This is the start of the animal class for 3120.'''
+    def __init__(self, name: str, flight: bool):
+        self.name = name
+        self.flight = flight  # Indicates if the animal has the ability to fly
 
-    def __init__(self, animal, species): 
-        '''I removed kingdom as a parameter since every animal is in the Animalia kingdom'''
-        self.animal = animal
-        self.kingdom = 'animalia'
-        self.species = species
+    def __str__(self):
+        return f"{self.name}, Flight Ability: {'Yes' if self.flight else 'No'}"
 
-    def describe(self):
-        '''This will print a descriptive sentence about the animal.'''
-        return f"{self.animal} is a species of {self.species} in the kingdom {self.kingdom}."
 
-# Testing the describe method
-elephant = Animal("The "+"Elephant", "Loxodonta africana")
-print(elephant.describe())
+# Child class for Birds
+class Bird(Animal):
+    def __init__(self, name: str, flight: bool = True):  # Default flight is True for birds
+        super().__init__(name, flight)
+
+
+# Test instances for flying/nonflying birds
+eagle = Bird(name="Eagle", flight=True)
+print(eagle)
+
+penguin = Bird(name="Penguin", flight=False)
+print(penguin)
+
