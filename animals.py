@@ -16,3 +16,8 @@ elephant = Animal("The "+"Elephant", "Loxodonta africana")
 print(elephant.describe())
 
 #added...
+elephant = Animal("Elephant", "Loxodonta africana")
+print(elephant.animal)
+print(elephant.kingdom)
+print(elephant.species)
+print(elephant.describe())
